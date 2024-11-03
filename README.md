@@ -7,7 +7,7 @@ Welcome to **Svelte Actions**, a package that includes a variety of Svelte actio
 To install the package, use npm , pnpm or yarn:
 
 ```bash
-npm install @gzimbron/svelte-actions
+npm install @gzim/svelte-actions
 
 ```
 
@@ -31,7 +31,7 @@ This action allows you to execute a callback when an element enters the viewport
 
 ```svelte
 <script>
-	import { inView, type InViewParams } from '@gzimbron/svelte-actions';
+	import { inView, type InViewParams } from '@gzim/svelte-actions';
 
 	const inViewParams: InViewParams = {
 		callback: () => {
@@ -52,7 +52,7 @@ This action allows you to execute a callback when an element leaves the viewport
 
 ```svelte
 <script>
-	import { outOfView, type OutOfViewParams } from '@gzimbron/svelte-actions';
+	import { outOfView, type OutOfViewParams } from '@gzim/svelte-actions';
 
 	const outOfViewParams: OutOfViewParams = {
 		callback: () => {
@@ -73,7 +73,7 @@ This action allows you to execute a callback when a key or combination of keys a
 
 ```svelte
 <script>
-	import { hotkey } from '@gzimbron/svelte-actions';
+	import { hotkey } from '@gzim/svelte-actions';
 </script>
 
 <section
