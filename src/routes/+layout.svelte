@@ -6,7 +6,8 @@
 	const examples = new Map<string, string>([
 		['/in-view', 'In View'],
 		['/out-of-view', 'Out of View'],
-		['/hotkey', 'Hotkey']
+		['/hotkey', 'Hotkey'],
+		['/click-outside', 'Click Outside']
 	]);
 
 	let title = $derived.by(() => {

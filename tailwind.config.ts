@@ -10,7 +10,21 @@ export default {
 		extend: {}
 	},
 	daisyui: {
-		themes: ['light', 'dark']
+		themes: [
+			{
+				custom: {
+					primary: '#00a1ff',
+					secondary: '#0023ff',
+					accent: '#00acff',
+					neutral: '#010a15',
+					'base-100': '#faffff',
+					info: '#00f8ff',
+					success: '#93e800',
+					warning: '#ebc500',
+					error: '#d30000'
+				}
+			}
+		]
 	},
 
 	plugins: [typography, forms, daisyui]
