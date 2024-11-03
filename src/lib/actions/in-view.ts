@@ -32,7 +32,7 @@ export interface InViewParams<T extends HTMLElement = HTMLElement> {
 	 * - Values between `0` and `1` represent the percentage of the element that must be visible
 	 *   in the viewport for the callback to be executed.
 	 *
-	 * @default 0
+	 * @default 1
 	 */
 	threshold?: number;
 }
@@ -69,7 +69,7 @@ export function inView<T extends HTMLElement>(node: T, params: InViewParams<T>) 
 				});
 			},
 			{
-				threshold: params.threshold || 0
+				threshold: params.threshold || 1
 			}
 		);
 

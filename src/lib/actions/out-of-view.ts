@@ -32,7 +32,7 @@ export interface OutOfViewParams<T extends HTMLElement = HTMLElement> {
 	 * - Values between `0` and `1` represent the percentage of the element that must be outside the viewport
 	 *   for the callback to be executed.
 	 *
-	 * @default 0
+	 * @default 1
 	 */
 	threshold?: number;
 }
@@ -69,7 +69,7 @@ export function outOfView<T extends HTMLElement>(node: T, params: OutOfViewParam
 				});
 			},
 			{
-				threshold: 1 - (params.threshold || 0)
+				threshold: 1 - (params.threshold || 1)
 			}
 		);
 
