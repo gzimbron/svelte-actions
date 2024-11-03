@@ -1,6 +1,24 @@
 {
-	"name": "sv-actions",
+	"name": "@gzimbron/svelte-actions",
+	"description": "Collection of svelte actions",
 	"version": "0.0.1",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": {
+		"name": "Gustavo Zimbrón",
+		"email": "gustavo@zimbron.app",
+		"url": "https://zimbron.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gzimbron/svelte-actions.git"
+	},
+	"homepage": "https://github.com/gzimbron/svelte-actions",
+	"bugs": {
+		"url": "https://github.com/gzimbron/svelte-actions/issues"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -33,7 +51,7 @@
 		}
 	},
 	"peerDependencies": {
-		"svelte": "^5.0.0"
+		"svelte": "^3.1.0 || ^4.0.0 || ^5.0.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",

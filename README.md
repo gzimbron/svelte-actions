@@ -1,58 +1,90 @@
-# create-svelte
+# Svelte Actions
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Welcome to **Svelte Actions**, a package that includes a variety of Svelte actions to streamline the development of your applications. This package aims to provide reusable and easy-to-implement actions that enhance the interactivity and performance of your components.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Installation
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+To install the package, use npm , pnpm or yarn:
 
 ```bash
-# create a new project in the current directory
-npx sv create
+npm install @gzimbron/svelte-actions
 
-# create a new project in my-app
-npx sv create my-app
 ```
 
-## Developing
+## Available Actions
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Here is a list of currently available Svelte actions:
 
-```bash
-npm run dev
+- [In View](#in-view)
+- [Out of View](#out-of-view)
+- [HotKey](#hotkey)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+## Suggest or Add an Action
+
+We welcome contributions from the community! If you have an idea for a new action or would like to suggest an enhancement to an existing one, please open an issue with your requirements. Our community will review your suggestion and work towards adding it.
+
+Pull requests are also welcome for new actions! Feel free to submit your code contributions, and we’ll be happy to review and merge them.
+
+### In View
+
+This action allows you to execute a callback when an element enters the viewport.
+
+```svelte
+<script>
+	import { inView, type InViewParams } from '@gzimbron/svelte-actions';
+
+	const inViewParams: InViewParams = {
+		callback: () => {
+			console.log('Element entered the viewport');
+		}
+	};
+</script>
+
+<section>
+	<!-- Lot of scrollable content -->
+	<p use:inView={inViewParams}>Your element</p>
+</section>
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+### Out of View
 
-## Building
+This action allows you to execute a callback when an element leaves the viewport.
 
-To build your library:
+```svelte
+<script>
+	import { outOfView, type OutOfViewParams } from '@gzimbron/svelte-actions';
 
-```bash
-npm run package
+	const outOfViewParams: OutOfViewParams = {
+		callback: () => {
+			console.log('Element left the viewport');
+		}
+	};
+</script>
+
+<section>
+	<p use:outOfView={outOfViewParams}>Your element</p>
+	<!-- Lot of scrollable content -->
+</section>
 ```
 
-To create a production version of your showcase app:
+### HotKey
 
-```bash
-npm run build
-```
+This action allows you to execute a callback when a key or combination of keys are pressed.
 
-You can preview the production build with `npm run preview`.
+```svelte
+<script>
+	import { hotkey } from '@gzimbron/svelte-actions';
+</script>
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+<section
+	use:hotkey={{
+		callback: () => {
+			console.log('Pressed Alt + P');
+		},
+		alt: true,
+		code: 'KeyP'
+	}}
+>
+	<p>Press Alt/Option + P to execute the callback</p>
+</section>
 ```
