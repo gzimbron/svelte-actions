@@ -6,6 +6,7 @@
 	import '@svelteness/kit-docs/client/styles/vars.css';
 
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	import { Button, KitDocs, KitDocsLayout, createSidebarContext } from '@svelteness/kit-docs';
 

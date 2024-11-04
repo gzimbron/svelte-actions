@@ -5,7 +5,9 @@ const config = {
 	extensions: ['.svelte', '.md'],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			strict: false
+		}),
 
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
