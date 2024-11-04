@@ -1,5 +1,11 @@
 # @gzim/svelte-actions
 
+## 0.0.7
+
+### Patch Changes
+
+- 14794a1: testing cd.yml
+
 ## 0.0.6
 
 ### Patch Changes
