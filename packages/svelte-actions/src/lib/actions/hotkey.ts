@@ -3,8 +3,9 @@ import type { Action } from 'svelte/action';
 interface HotKeyParams {
 	/**
 	 * Callback function to be executed when the specified hotkey is pressed.
+	 * If not provided, the node will be clicked.
 	 */
-	callback: () => void;
+	callback?: () => void;
 
 	/**
 	 * If `true`, the Shift key must be held down for the callback to be executed.
@@ -51,7 +52,7 @@ const KeysToEventMap: Record<HotKeyParamsWithoutCB, keyof KeyboardEvent> = {
 	code: 'code'
 };
 
-export const hotkey: Action<HTMLElement, HotKeyParams> = (_, params: HotKeyParams) => {
+export const hotkey: Action<HTMLElement, HotKeyParams> = (node, params: HotKeyParams) => {
 	let stop: () => void;
 
 	const destroy = () => {
@@ -76,7 +77,11 @@ export const hotkey: Action<HTMLElement, HotKeyParams> = (_, params: HotKeyParam
 				!undefinedKeys.some((key) => !!event[KeysToEventMap[key as HotKeyParamsWithoutCB]])
 			) {
 				event.preventDefault();
-				params.callback?.();
+				if (params.callback) {
+					params.callback();
+				} else {
+					node.click();
+				}
 			}
 		}
 
