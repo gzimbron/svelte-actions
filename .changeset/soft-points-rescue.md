@@ -1,0 +1,5 @@
+---
+"documentation": patch
+---
+
+fix: redirection
