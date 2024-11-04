@@ -1,5 +1,11 @@
 # @gzim/svelte-actions
 
+## 0.0.8
+
+### Patch Changes
+
+- 95954ea: hotkey now do node click if not callback setted
+
 ## 0.0.7
 
 ### Patch Changes
