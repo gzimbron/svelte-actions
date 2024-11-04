@@ -17,7 +17,12 @@
 
 	/** @type {import('@svelteness/kit-docs').NavbarConfig} */
 	const navbar = {
-		links: []
+		links: [
+			{
+				title: 'Github',
+				slug: 'https://github.com/gzimbron/svelte-actions'
+			}
+		]
 	};
 
 	const { activeCategory } = createSidebarContext(sidebar);
@@ -41,7 +46,7 @@
 <KitDocs {meta}>
 	<KitDocsLayout {navbar} {sidebar}>
 		<div class="logo" slot="navbar-left">
-			<Button href="/">Svelte Actions 🪄</Button>
+			<Button href="{base}/">Svelte Actions 🪄</Button>
 		</div>
 
 		<slot />

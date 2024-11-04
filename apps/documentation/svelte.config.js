@@ -13,7 +13,6 @@ const config = {
 			base: '/svelte-actions'
 		},
 		prerender: {
-			entries: ['*'],
 			handleMissingId: 'warn'
 		}
 	}
