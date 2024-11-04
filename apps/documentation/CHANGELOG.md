@@ -1,5 +1,12 @@
 # documentation
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [fa5833e]
+  - @gzim/svelte-actions@0.0.6
+
 ## 1.0.3
 
 ### Patch Changes
