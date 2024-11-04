@@ -1,5 +1,11 @@
 # documentation
 
+## 1.0.8
+
+### Patch Changes
+
+- bb020cd: Update clickOutside and hotkey documentation
+
 ## 1.0.7
 
 ### Patch Changes
