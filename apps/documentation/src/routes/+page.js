@@ -1,9 +1,15 @@
 import { base } from '$app/paths';
 import { redirect } from '@sveltejs/kit';
 
-//export const prerender = true;
+export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
-export function load() {
-	throw redirect(307, `${base}/docs/welcome#${base}`);
+export function load({ url }) {
+	let redirectionBase = '';
+
+	if (url.origin.includes('github.io')) {
+		redirectionBase = url.origin + '/svelte-actions';
+	}
+
+	throw redirect(307, `${redirectionBase}/docs/welcome#${base}`);
 }
