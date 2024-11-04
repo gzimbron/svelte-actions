@@ -5,5 +5,5 @@ import { redirect } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageLoad} */
 export function load() {
-	throw redirect(307, `${base}/docs/welcome`);
+	throw redirect(307, `${base}/docs/welcome#${base}`);
 }
