@@ -4,12 +4,6 @@ import { redirect } from '@sveltejs/kit';
 export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
-export function load({ url }) {
-	let redirectionBase = '';
-
-	if (url.origin.includes('github.io')) {
-		redirectionBase = 'https://gzimbron.github.io/svelte-actions';
-	}
-
-	throw redirect(307, `${redirectionBase}/docs/welcome#${base}`);
+export function load() {
+	throw redirect(307, `./docs/welcome#${base}`);
 }
