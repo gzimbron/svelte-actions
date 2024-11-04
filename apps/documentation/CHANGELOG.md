@@ -1,5 +1,11 @@
 # documentation
 
+## 1.0.3
+
+### Patch Changes
+
+- 7ffd1d6: fix base path
+
 ## 1.0.2
 
 ### Patch Changes
