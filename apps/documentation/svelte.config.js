@@ -6,6 +6,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		paths: {
+			base: '/svelte-actions'
+		},
 
 		prerender: {
 			entries: ['*'],
