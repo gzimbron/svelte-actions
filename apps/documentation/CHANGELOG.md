@@ -1,5 +1,12 @@
 # documentation
 
+## 1.0.2
+
+### Patch Changes
+
+- 2df9e22: fix base path
+- eefc65c: base path
+
 ## 1.0.1
 
 ### Patch Changes
