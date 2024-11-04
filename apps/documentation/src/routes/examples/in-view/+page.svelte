@@ -1,5 +1,6 @@
 <script>
 	import { inView } from '@gzim/svelte-actions';
+	import { base } from '$app/paths';
 
 	const inViewParams = {
 		callback: () => {
@@ -9,7 +10,7 @@
 </script>
 
 <section>
-	<span>👇🏻 Scroll down </span>
+	<span>👇🏻 Scroll down {base}</span>
 
 	<p use:inView={inViewParams}>Your element</p>
 </section>
