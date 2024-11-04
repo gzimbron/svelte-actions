@@ -2,7 +2,7 @@
 	"name": "svelte-actions-monorepo",
 	"private": true,
 	"scripts": {
-		"build": "turbo run build",
+		"build": "echo $BASE_PATH && turbo run build",
 		"dev": "turbo run dev",
 		"dev-docs": "turbo run dev-docs",
 		"lint": "turbo run lint",
