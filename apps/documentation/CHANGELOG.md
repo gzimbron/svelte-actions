@@ -1,5 +1,11 @@
 # documentation
 
+## 1.0.7
+
+### Patch Changes
+
+- 4001790: Change favicon
+
 ## 1.0.6
 
 ### Patch Changes
