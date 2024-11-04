@@ -11,7 +11,7 @@
 		"test:watch": "turbo run test:watch",
 		"format": "prettier --write .",
 		"package": "turbo run package && cp README.md packages/svelte-actions/README.md",
-		"release": "turbo package && changeset publish"
+		"release": "changeset publish"
 	},
 	"keywords": [],
 	"author": "",
