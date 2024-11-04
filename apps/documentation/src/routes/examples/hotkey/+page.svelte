@@ -10,17 +10,19 @@
 		alt: true,
 		code: 'KeyP'
 	}}
-	use:hotkey={{
-		callback: () => {
-			alert('You have pressed Alt/Option + Shift + M');
-		},
-		alt: true,
-		shift: true,
-		code: 'KeyM'
-	}}
 >
 	<p>Press Alt/Option + P</p>
-	<p>Press Alt/Option + Shift + M</p>
+	<button
+		use:hotkey={{
+			alt: true,
+			code: 'KeyB'
+		}}
+		on:click={() => {
+			alert('Button pressed');
+		}}
+	>
+		Click or press Alt/Option + B</button
+	>
 </section>
 
 <style>
@@ -30,9 +32,18 @@
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 
 		font-size: 2rem;
 		color: rgb(var(--kd-color-brand));
+	}
+
+	button {
+		padding: 0.5rem 1rem;
+		margin: 1rem;
+		border: 1px solid transparent;
+		border-radius: 0.25rem;
+		background-color: rgb(var(--kd-color-brand));
+		color: rgb(var(--kd-color-inverse));
 	}
 </style>

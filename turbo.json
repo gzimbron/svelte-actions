@@ -15,10 +15,6 @@
 		"dev": {
 			"cache": false,
 			"persistent": true
-		},
-		"dev-docs": {
-			"cache": false,
-			"persistent": true
 		}
 	}
 }
