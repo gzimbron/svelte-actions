@@ -1,7 +1,7 @@
 {
 	"name": "sv5-testing",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev --host 0.0.0.0 --port 5353",
