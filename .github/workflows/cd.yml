@@ -25,6 +25,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9.0.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -32,9 +33,6 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install --no-frozen-lockfile
-
-      - name: Package
-        run: pnpm package
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
