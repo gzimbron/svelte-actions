@@ -14,7 +14,7 @@
 
 <section>
 	<button style:--scale={scale} use:clickOutside={handleClickOutside} on:click={handleClick}>
-		Click me
+		{scale === 1 ? 'Click outside' : 'Click me to reset'}
 	</button>
 </section>
 
