@@ -54,9 +54,7 @@ jobs:
 
       - name: Build
         if: ${{ steps.changesets.outputs.hasChangesets == 'true' }}
-        env:
-          BASE_PATH: "/${{ github.event.repository.name }}"
-        run: pnpm build
+        run: BASE_PATH="/${{ github.event.repository.name }}" pnpm build
 
       - name: Upload Artifacts
         if: ${{ steps.changesets.outputs.hasChangesets == 'true' }}
