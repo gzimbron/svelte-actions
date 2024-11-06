@@ -1,5 +1,11 @@
 # documentation
 
+## 1.0.9
+
+### Patch Changes
+
+- fec8a06: Added Github Repo Icon, Authors Web Icon
+
 ## 1.0.8
 
 ### Patch Changes
