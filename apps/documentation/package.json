@@ -1,5 +1,6 @@
 {
 	"name": "documentation",
+	"description": "Documentation for @gzim/svelte-actions",
 	"version": "1.0.9",
 	"private": true,
 	"scripts": {
