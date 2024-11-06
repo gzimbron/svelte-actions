@@ -32,7 +32,8 @@
 		"vite": "^4.0.0"
 	},
 	"dependencies": {
-		"@gzim/svelte-actions": "workspace:*"
+		"@gzim/svelte-actions": "workspace:*",
+		"@iconify/svelte": "3.1.6"
 	},
 	"type": "module"
 }

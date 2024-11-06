@@ -9,20 +9,19 @@
 	import { base } from '$app/paths';
 
 	import { Button, KitDocs, KitDocsLayout, createSidebarContext } from '@svelteness/kit-docs';
+	import Icon from '@iconify/svelte';
 
 	/** @type {import('./$types').LayoutData} */
 	export let data;
+
+	const GITHUB_LINK = 'https://github.com/gzimbron/svelte-actions';
+	const ZIMBRON_LINK = 'https://zimbron.dev';
 
 	$: ({ meta, sidebar } = data);
 
 	/** @type {import('@svelteness/kit-docs').NavbarConfig} */
 	const navbar = {
-		links: [
-			{
-				title: 'Github',
-				slug: 'https://github.com/gzimbron/svelte-actions'
-			}
-		]
+		links: []
 	};
 
 	const { activeCategory } = createSidebarContext(sidebar);
@@ -47,6 +46,27 @@
 	<KitDocsLayout {navbar} {sidebar}>
 		<div class="logo" slot="navbar-left">
 			<Button href="{base}/">Svelte Actions 🪄</Button>
+		</div>
+
+		<div slot="navbar-right-alt">
+			<div class="flex">
+				<a
+					href={ZIMBRON_LINK}
+					target="_blank"
+					title="Author's website"
+					class="relative flex transform-gpu items-center rounded-md border-0 p-2 transition-transform hover:scale-[1.1] text-xl"
+				>
+					<Icon icon="mdi:web" />
+				</a>
+				<a
+					href={GITHUB_LINK}
+					target="_blank"
+					title="GitHub repository"
+					class="relative flex transform-gpu items-center rounded-md border-0 p-2 transition-transform hover:scale-[1.1] text-xl"
+				>
+					<Icon icon="mdi:github" />
+				</a>
+			</div>
 		</div>
 
 		<slot />
